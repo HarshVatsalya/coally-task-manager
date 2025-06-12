@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
-import TaskList from './Components/TaskList'; // ✅ Import TaskList
+import TaskList from './Components/TaskList'; 
 
 function App() {
   return (

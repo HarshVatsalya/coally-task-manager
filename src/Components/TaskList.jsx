@@ -29,14 +29,14 @@ const [newStatus, setNewStatus] = useState("");
     onClose();
   };
   const handleAddTask = () => {
-  if (!newTitle.trim()) return; // basic validation
+  if (!newTitle.trim()) return; 
 
   const newTask = {
     id: tasks.length + 1,
     title: newTitle,
     description: newDesc,
     status: newStatus || "Pending",
-    createdAt: new Date().toISOString().split("T")[0], // YYYY-MM-DD
+    createdAt: new Date().toISOString().split("T")[0], 
   };
 
   setTasks([newTask, ...tasks]);

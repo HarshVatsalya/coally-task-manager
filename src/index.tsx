@@ -4,11 +4,11 @@
     import App from './App';
     import reportWebVitals from './reportWebVitals';
 
-    // Import ChakraProvider AND extendTheme
+    
     import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 
-    // Create a basic theme object
-    const theme = extendTheme({}); // This ensures 'theme' is of the correct type
+    
+    const theme = extendTheme({}); 
 
     const root = ReactDOM.createRoot(
       document.getElementById('root') as HTMLElement
