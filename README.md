@@ -47,3 +47,10 @@ npm install
 ```npm start
 
 🌐 Open your browser and visit: http://localhost:3000
+
+## 🛠️ Future Improvements
+
+- Persist tasks in `localStorage` so data survives page reloads.
+- Add sorting by creation date or alphabetically.
+- Implement a dark mode toggle using Chakra UI theming.
+- Set up separate routes (e.g., `/` for list, `/tasks/:id` for detail).
