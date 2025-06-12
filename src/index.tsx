@@ -5,19 +5,25 @@
     import reportWebVitals from './reportWebVitals';
 
     
-    import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-
+    import { ChakraProvider, extendTheme, ColorModeScript, ThemeConfig } from '@chakra-ui/react';
     
-    const theme = extendTheme({}); 
+    const config: ThemeConfig = {
+  initialColorMode: 'light',
+  useSystemColorMode: false,
+};
 
-    const root = ReactDOM.createRoot(
-      document.getElementById('root') as HTMLElement
-    );
 
+const theme = extendTheme({ config });
+
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
     root.render(
       <React.StrictMode>
         {/* Pass the 'theme' object to ChakraProvider */}
         <ChakraProvider theme={theme}>
+          {/* Step 3: ColorModeScript ensures correct mode on page load */}
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <App />
         </ChakraProvider>
       </React.StrictMode>
